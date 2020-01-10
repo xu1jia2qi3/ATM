@@ -6,8 +6,7 @@ db = redis.Redis(host="localhost", port=6379, db=1)
 
 
 def register():
-    run = True
-    while run:
+    while True:
         try:
             account_name = input('Enter your name: ')
             account_password = input('Enter Your Password: ')
