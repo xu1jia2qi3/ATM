@@ -13,13 +13,13 @@ def userMenu(login_id):
         menu = input(choice)
         #deposit
         if menu == '1':
-            cur_balance = fetch.deposit(data['money'])  
+            cur_balance = fetch.fetching.deposit(data['money'])  
             data['money'] = cur_balance
             new_data = pickle.dumps(data)
             db.set(login_id, new_data)
         #withdraw
         elif menu == '2':
-            cur_balance = fetch.withdraw(data['money'])  
+            cur_balance = fetch.fetching.withdraw(data['money'])  
             data['money'] = cur_balance
             new_data = pickle.dumps(data)
             db.set(login_id, new_data) 
